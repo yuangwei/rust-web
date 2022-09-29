@@ -1,52 +1,31 @@
 {
-  "name": "spider",
-  "version": "1.0.0",
-  "description": "",
   "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build && cargo build --release",
+    "dev": "remix dev",
+    "start": "run-p start:*",
+    "start:web": "remix-serve build",
+    "start:server": "./target/release/personal-space"
+
+  },
   "dependencies": {
-    "@midwayjs/bootstrap": "^3.0.0",
-    "@midwayjs/core": "^3.0.0",
-    "@midwayjs/decorator": "^3.0.0",
-    "@midwayjs/task": "3",
-    "@midwayjs/typegoose": "3",
-    "@midwayjs/web": "^3.0.0",
-    "egg": "^2.0.0"
+    "@remix-run/node": "^1.7.2",
+    "@remix-run/react": "^1.7.2",
+    "@remix-run/serve": "^1.7.2",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@midwayjs/cli": "^1.0.0",
-    "@midwayjs/egg-ts-helper": "^1.0.1",
-    "@midwayjs/mock": "^3.0.0",
-    "@types/bull": "^3.15.9",
-    "@types/jest": "^26.0.10",
-    "@types/node": "14",
-    "cross-env": "^6.0.0",
-    "egg-mock": "^3.26.0",
-    "jest": "^26.4.0",
-    "mwts": "^1.0.5",
-    "ts-jest": "^26.2.0",
-    "typescript": "~4.6.0"
+    "@remix-run/dev": "^1.7.2",
+    "@remix-run/eslint-config": "^1.7.2",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.23.1",
+    "typescript": "^4.7.4"
   },
   "engines": {
-    "node": ">=12.0.0"
-  },
-  "scripts": {
-    "start": "node bootstrap.js",
-    "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts",
-    "test": "midway-bin test --ts",
-    "cov": "midway-bin cov --ts",
-    "lint": "mwts check",
-    "lint:fix": "mwts fix",
-    "ci": "npm run cov",
-    "build": "midway-bin build -c"
-  },
-  "midway-bin-clean": [
-    ".vscode/.tsbuildinfo",
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "MIT"
+    "node": ">=14"
+  }
 }
