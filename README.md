@@ -6,7 +6,7 @@ Personal workspace app based on rust + nodejs.
 
 - Search properties in China.
 - Personal assets analysis.
-- English translate and save words in Notion.
+- English translate and save words to Notion.
 
 ## Develop
 
