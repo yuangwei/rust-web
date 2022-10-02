@@ -1,4 +1,4 @@
-# falcon
+# Falcon workspace
 
 Personal workspace app based on rust + nodejs.
 
