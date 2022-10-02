@@ -1,0 +1,10 @@
+[default]
+address = "127.0.0.1"
+cli_colors = true
+ident = "Falcon"
+keep_alive = 5
+log_level = "normal"
+max_blocking = 512
+port = 8000
+temp_dir = "/tmp"
+workers = 16
