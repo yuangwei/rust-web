@@ -1,18 +1,18 @@
-use rocket::serde::{Serialize, json::Json};
+use serde::{Deserialize, Serialize};
 
 use crate::api::*;
 
-#[derive(Serialize)]
-#[serde(crate = "rocket::serde")]
+#[derive(Serialize, Deserialize)]
 struct HomeResp {
-  string: String,
+    string: i32,
 }
 
 #[get("/")]
 fn home() -> Json<ApiResponse<HomeResp>> {
-  api_success(HomeResp { string: String::from("ok") })
+    let data = HomeResp { string: 200 };
+    ApiResponse::error(200, "heelo")
 }
 
 pub fn routes() -> Vec<rocket::Route> {
-  routes![home]
+    routes![home]
 }
