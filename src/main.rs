@@ -1,13 +1,14 @@
 mod api;
+mod model;
 mod remote;
 mod service;
 mod task;
-mod model;
 
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 
 #[rocket::main]
 async fn main() -> Result<(), rocket::Error> {
-  let _web = api::init().launch().await;
-  Ok(())
+    let _rocket = api::init().attach(model::init().await).launch().await;
+    Ok(())
 }

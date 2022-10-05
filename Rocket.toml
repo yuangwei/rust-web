@@ -8,3 +8,7 @@ max_blocking = 512
 port = 8000
 temp_dir = "/tmp"
 workers = 16
+
+[default.mongodb]
+database = "falcon"
+url = "mongodb+srv://yuang:<password>@cluster0.suglge8.mongodb.net/?retryWrites=true&w=majority"

@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [dependencies]
 chrono = {version = "0.4", features = ["serde"]}
+mongodb = "2.3.0"
 rocket = {version = "0.5.0-rc.2", features = ["json"]}
 serde = "1"
 serde_derive = "1"
