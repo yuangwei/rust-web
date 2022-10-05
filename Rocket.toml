@@ -1,7 +1,7 @@
 [default]
 address = "127.0.0.1"
 cli_colors = true
-ident = "Falcon"
+ident = "Nginx"
 keep_alive = 5
 log_level = "normal"
 max_blocking = 512

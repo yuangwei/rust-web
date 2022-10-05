@@ -397,19 +397,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "falcon"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "mongodb",
- "rocket",
- "serde",
- "serde_derive",
- "serde_json",
- "uuid 0.8.2",
-]
-
-[[package]]
 name = "fastrand"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1392,6 +1379,19 @@ dependencies = [
  "time 0.3.14",
  "tokio",
  "uncased",
+]
+
+[[package]]
+name = "rust-fullstack"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "mongodb",
+ "rocket",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "uuid 0.8.2",
 ]
 
 [[package]]

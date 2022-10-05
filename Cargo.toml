@@ -1,6 +1,6 @@
 [package]
 edition = "2021"
-name = "falcon"
+name = "rust-fullstack"
 version = "0.1.0"
 
 [dependencies]
