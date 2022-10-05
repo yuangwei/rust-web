@@ -15,12 +15,12 @@ impl User {
     pub async fn get_userinfo(
         db: &Database,
         email: &String,
-    ) -> mongodb::error::Result<Option<Self>, _> {
+    ) -> mongodb::error::Result<Option<Self>> {
         let user = User::conn(&db)
             .find_one(mongodb::bson::doc! {"email":email }, None)
             .await?;
         if user.is_none() {
-            Ok(None)
+            Ok(())
         }
         Ok(user)
     }
